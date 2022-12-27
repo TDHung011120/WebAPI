@@ -20,7 +20,7 @@ namespace Web.Model.Models
         [MaxLength(50)]
         public string Type { get; set; }
 
-        public IEnumerable<PostTag> PostTags { get; set; }
-        public IEnumerable<ProductTag>  ProductTags { get; set; }
+       
+        
     }
 }

@@ -9,16 +9,18 @@ namespace Web.Model.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column(TypeName = "nvarchar")]
-        [MaxLength(250)]
+        
+        
         [Required]
+        [MaxLength(250)]
         public string Name { get; set; }
         [Required]
+        [MaxLength(250)]
         [Column(TypeName = "varchar")]
         public string Description { get; set; }
         [MaxLength(500)]
         public string URL { get; set; }
-        [Column(TypeName = "nvarchar")]
+        
         public int? DisplayOder { get; set; }
         [Required]
         public int GroupID { get; set; }
