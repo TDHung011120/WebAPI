@@ -8,10 +8,12 @@ namespace Web.Model.Models
     public class PostTag
     {
         [Key]
+        [Column(Order = 1)]
         public int PostID { get; set; }
 
         [Key]
-        [Required]
+        
+        [Column(Order =2,TypeName ="varchar")]
         [MaxLength(50)]
         public string TagID { get; set; }
 

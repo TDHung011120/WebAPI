@@ -26,7 +26,7 @@ namespace Web.Model.Models
         public string  Email { get; set; }
         [MaxLength(250)]
         public string  FaceBook { get; set; }
-        [MaxLength(250)]
+        
         public bool  Status { get; set; }
 
     }

@@ -18,6 +18,10 @@ namespace Web.Model.Models
         [MaxLength(250)]
         public string Name { get; set; }
         [Required]
+        [Column(TypeName ="varchar")]
+        [MaxLength(250)]
+        public string Alias { get; set; }
+        [Required]
         public string Content { get; set; }
 
         public string MetaKeyWord { get; set; }

@@ -29,6 +29,6 @@ namespace Web.Model.Models
         [MaxLength(500)]
         public string Inage { get; set; }
         public bool HomeFlag { get; set; }
-        public virtual IEnumerable<Post> Posts { get; set; } 
+        public virtual IEnumerable<Post> Posts { get; set; }  
     }
 }

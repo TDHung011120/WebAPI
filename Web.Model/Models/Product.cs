@@ -27,11 +27,12 @@ namespace Web.Model.Models
         public int CategoryID { get; set; }
 
         public string Inage { get; set; }
-        public XElement MoreImages { get; set; }
+        [Column(TypeName ="xml")]
+        public string MoreImages { get; set; }
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
+        
         public decimal Price { get; set; }
-        [Column(TypeName = "decimal(18, 2)")]
+        
         public decimal? PromotionPrice { get; set; }
         public int? Warranty { get; set; }
         [MaxLength(500)]
@@ -42,7 +43,6 @@ namespace Web.Model.Models
         public int? ViewCount { get; set; }
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }
-        public virtual IEnumerable<OderDetail> OderDetails { get; set; }
-        public virtual IEnumerable<ProductTag> ProductTags { get; set; }
+         
     }
 }

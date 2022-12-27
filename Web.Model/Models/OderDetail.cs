@@ -7,18 +7,21 @@ namespace Web.Model.Models
     public class OderDetail
     {
         [Key]
+        [Column(Order = 1)]
         public int OderID { get; set; }
 
         [Key]
+        [Column(Order = 2)]
         public int ProductID { get; set; }
 
-        [Required]
         public int Quantity { get; set; } //số lượng
+
+        [ForeignKey("OderID")]
+        public virtual Oder Oder { get; set; }
 
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
 
-        [ForeignKey("OderID")]
-        public virtual Oder Oder { get; set; }
+        
     }
 }

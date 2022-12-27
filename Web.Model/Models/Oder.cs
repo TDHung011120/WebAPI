@@ -13,12 +13,10 @@ namespace Web.Model.Models
         public int ID { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar")]
         [MaxLength(250)]
         public string CustomerName { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar")]
         [MaxLength(250)]
         public string CustomerAddress { get; set; }
 
@@ -31,21 +29,23 @@ namespace Web.Model.Models
         [Column(TypeName = "varchar")]
         [MaxLength(10)]
         public string CustomerPhone { get; set; }
-
+        [Required]
+        [MaxLength(250)]
+        public string CustomerMessage { get; set; }
         public DateTime? CreateDate { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar")]
+        
         [MaxLength(50)]
         public string CreateBy { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar")]
+        
         [MaxLength(50)]
         public string PayMethod { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar")]
+        
         [MaxLength(50)]
         public string PayStatus { get; set; }
 
