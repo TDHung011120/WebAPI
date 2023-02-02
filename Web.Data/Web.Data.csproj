@@ -52,31 +52,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIDbContext.cs" />
-    <Compile Include="Intrastructure\DbFactory.cs" />
-    <Compile Include="Intrastructure\Disposable.cs" />
-    <Compile Include="Intrastructure\IDbFactory.cs" />
-    <Compile Include="Intrastructure\IRepository.cs" />
-    <Compile Include="Intrastructure\IUnitOfWork.cs" />
-    <Compile Include="Intrastructure\Respository.cs" />
-    <Compile Include="Intrastructure\UnitOfWork.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\202212300054124_v0.cs" />
+    <Compile Include="Migrations\202212300054124_v0.designer.cs">
+      <DependentUpon>202212300054124_v0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301051239024_AddErrorTable.cs" />
+    <Compile Include="Migrations\202301051239024_AddErrorTable.designer.cs">
+      <DependentUpon>202301051239024_AddErrorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Respositories\FooterRespository.cs" />
-    <Compile Include="Respositories\MenuGroupRespository.cs" />
-    <Compile Include="Respositories\MenuRespository.cs" />
-    <Compile Include="Respositories\OderDetailRespository.cs" />
-    <Compile Include="Respositories\OderRespository.cs" />
-    <Compile Include="Respositories\PageRespository.cs" />
-    <Compile Include="Respositories\PostCategoryRespository.cs" />
-    <Compile Include="Respositories\PostRespository.cs" />
-    <Compile Include="Respositories\PostTagRespository.cs" />
-    <Compile Include="Respositories\ProductCategoryRespository.cs" />
-    <Compile Include="Respositories\ProductRespository.cs" />
-    <Compile Include="Respositories\ProductTagRespository.cs" />
-    <Compile Include="Respositories\SlideRespository.cs" />
-    <Compile Include="Respositories\SupportOnlineRespository.cs" />
-    <Compile Include="Respositories\SystemConfigRespository.cs" />
-    <Compile Include="Respositories\TagRespository.cs" />
-    <Compile Include="Respositories\VisitorStatisticRespository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\FooterRepository.cs" />
+    <Compile Include="Repositories\MenuGroupRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\OderDetailRepository.cs" />
+    <Compile Include="Repositories\OderRepository.cs" />
+    <Compile Include="Repositories\PageRepository.cs" />
+    <Compile Include="Repositories\PostCategoryRepository.cs" />
+    <Compile Include="Repositories\PostRepository.cs" />
+    <Compile Include="Repositories\PostTagRepository.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProductTagRepository.cs" />
+    <Compile Include="Repositories\SlideRepository.cs" />
+    <Compile Include="Repositories\SupportOnlineRepository.cs" />
+    <Compile Include="Repositories\SystemConfigRepository.cs" />
+    <Compile Include="Repositories\TagRepository.cs" />
+    <Compile Include="Repositories\VisitorStatisticRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,6 +101,14 @@
       <Project>{be232dfe-02a2-42f0-9811-0e0a79c03e65}</Project>
       <Name>Web.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202212300054124_v0.resx">
+      <DependentUpon>202212300054124_v0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301051239024_AddErrorTable.resx">
+      <DependentUpon>202301051239024_AddErrorTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

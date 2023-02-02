@@ -53,11 +53,12 @@
   <ItemGroup>
     <Compile Include="Abstract\AudiTable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Footer.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuGroup.cs" />
-    <Compile Include="Models\Oder.cs" />
-    <Compile Include="Models\OderDetail.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\PostCategory.cs" />
